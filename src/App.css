@@ -3,9 +3,9 @@
   /* background: pink; */
 }
 
-.navDark {
+/* .Home #HeaderPage .navDark {
   background: rgba(0, 0, 0, 0.5);
-}
+} */
 
 .navbarTittle {
   /* margin-left: -5%; */
@@ -52,6 +52,14 @@ h2 {
   font-weight: 900;
   font-size: 60px;
 }
+.registHotel {
+  padding-left: 16%;
+  margin-top: 20px;
+}
+
+.listHotel {
+  padding-left: 16%;
+}
 
 .datePick {
   background-color: white;
@@ -83,6 +91,12 @@ label {
   margin-top: 5px;
   margin-bottom: 20px;
   color: orange;
+}
+
+.btnKirim {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 71%;
 }
 
 .box {
@@ -248,7 +262,7 @@ label {
 }
 
 #servicesBody {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.699);
 }
 
 #contactBody {
@@ -303,4 +317,12 @@ label {
   height: 100vh;
   scroll-behavior: smooth;
   overflow-y: scroll;
+}
+
+.registration {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }

@@ -1,17 +1,19 @@
 import React from "react";
 import "./App.css";
 import { Router } from "@reach/router";
-import { HeaderPage } from './components'
-import { Home, Hotel } from "./pages";
+import { Navbar } from './components'
+import { Home, Hotel, RegistHotel } from "./pages";
 import { BrowserRouter} from 'react-router-dom';
 
 const App = () => {
     return (
       <BrowserRouter className="App">
-        <HeaderPage />
+        {/* <HeaderPage/> */}
+        {/* <Navbar /> */}
         <Router>
-        <Home path="/" />
+        <Home path="/"/>
         <Hotel path='/hotel'/>
+        <RegistHotel path='/registrasiHotel' />
         </Router>
       </BrowserRouter>
     );
