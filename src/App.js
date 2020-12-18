@@ -1,49 +1,22 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
 import './App.css';
-import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
-import routes from './config/routes';
-import { isUserAuthenticated } from './utils/cookie';
-
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  return (
-    <Route
-      {...rest}
-      render={() => {
-        if (isUserAuthenticated()) {
-          return <Component />;
-        }
-        return <Redirect to="/login" />;
-      }}
-    />
-  );
-};
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Table from './components/pagination/Table';
+import Registration from './pages/Registration';
+import Home from './pages/home';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <>
+    <Router>
+      <Navbar />
       <Switch>
-        {routes.map((route) => {
-          if (route.isPublic) {
-            return (
-              <Route
-                path={route.path}
-                component={route.component}
-                key={route.path}
-              />
-            );
-          }
-          return (
-            <PrivateRoute
-              path={route.path}
-              component={route.component}
-              key={route.path}
-            />
-          );
-        })}
+        <Route path='/' exact component={Home} />
+        <Route path='/registration' component={Registration} />
       </Switch>
-    </BrowserRouter>
+    </Router>
+    </>
   );
-};
+}
 
 export default App;
