@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { Component } from "react";
+import '../../App.css';
+import { Hero, DatePickers } from "../../components";
 
-const Home = () => {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
-};
+class Home extends Component {
+  render() {
+    return (
+      <div id='home'>
+        <Hero />
+        <DatePickers />
+      </div>
+    );
+  }
+}
 
 export default Home;

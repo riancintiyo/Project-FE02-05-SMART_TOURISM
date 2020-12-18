@@ -1,49 +1,20 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
-import './App.css';
-import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
-import routes from './config/routes';
-import { isUserAuthenticated } from './utils/cookie';
-
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  return (
-    <Route
-      {...rest}
-      render={() => {
-        if (isUserAuthenticated()) {
-          return <Component />;
-        }
-        return <Redirect to="/login" />;
-      }}
-    />
-  );
-};
+import React from "react";
+import "./App.css";
+import { Router } from "@reach/router";
+import { HeaderPage } from './components'
+import { Home, Hotel } from "./pages";
+import { BrowserRouter} from 'react-router-dom';
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Switch>
-        {routes.map((route) => {
-          if (route.isPublic) {
-            return (
-              <Route
-                path={route.path}
-                component={route.component}
-                key={route.path}
-              />
-            );
-          }
-          return (
-            <PrivateRoute
-              path={route.path}
-              component={route.component}
-              key={route.path}
-            />
-          );
-        })}
-      </Switch>
-    </BrowserRouter>
-  );
-};
+    return (
+      <BrowserRouter className="App">
+        <HeaderPage />
+        <Router>
+        <Home path="/" />
+        <Hotel path='/hotel'/>
+        </Router>
+      </BrowserRouter>
+    );
+  }
 
 export default App;

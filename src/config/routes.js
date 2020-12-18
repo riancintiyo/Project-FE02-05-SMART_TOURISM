@@ -1,11 +1,16 @@
-// import { Home } from '../pages';
+import { Home, Hotel } from '../pages'
 
 const routes = [
-  // {
-  //   path: '/',
-  //   component: Home,
-  //   isPublic: true,
-  // },
-];
+    {
+        path: '/hotel',
+        Component: Hotel,
+        isPublic: true,
+    },
+    {
+        path: '/',
+        Component: Home,
+        isPublic: true,
+    }
+]
 
 export default routes;

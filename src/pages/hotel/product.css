@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.content {
+  display: grid;
+  list-style-type: none;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px;
+  grid-template-columns: repeat(5, auto);
+  background-size: cover;
+}
+/*
+.box {
+  width: 230px;
+  height: 230px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  width: 100%;
+  max-width: 318px;
+  padding: 20px 10px 10px;
+  margin: 10px auto;
+  color: black;
+  border-radius: 10px;
+}
+.discount {
+  padding: 0.3rem 0.5rem;
+  color: rgb(255, 92, 132);
+  background-color: rgb(255, 234, 239);
+  max-width: 50px;
+  height: 30px;
+  border-radius: 8px;
+}
+.product {
+  width: 100%;
+  max-width: 218px;
+  padding: 2px;
+  color: black;
+  margin: 10px 0;
+}
+
+
+*/
+.hotelPage {
+  padding-top: 5%;
+  padding-bottom: 20px;
+}
+
+p {
+  font-size: 12px;
+  margin: 4px 0 15px 0;
+  text-align: justify;
+}
+/*
+h4 {
+  padding-top: 5px;
+  font-size: 15px;
+  text-align: justify;
+  color: black;
+  text-decoration: line-through;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+.unit_price {
+  font-size: 15px;
+  color: red;
+}
+
+.form-content {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.65);
+} */
